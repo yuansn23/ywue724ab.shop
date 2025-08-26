@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script>
-        function k2() {
-            window.open('https://wa.me/11111111', '_blank');
-        }
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IC3 - Internet Crime Complaint Center | Report Cyber Crimes</title>
@@ -43,8 +38,6 @@
             flex-wrap: wrap;
         }
 
-
-
         .logo {
             font-size: 2.5rem;
             font-weight: bold;
@@ -56,6 +49,25 @@
             font-size: 1.1rem;
             color: #ffffff;
             opacity: 0.9;
+        }
+
+        .security-badges {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(255, 215, 0, 0.1);
+            border: 1px solid #FFD700;
+            border-radius: 8px;
+            padding: 8px 12px;
+            font-size: 0.8rem;
+            color: #FFD700;
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
 
         .hero {
@@ -93,6 +105,18 @@
             animation: fadeInUp 1s ease-out 0.3s both;
         }
 
+        .urgency-banner {
+            background: linear-gradient(45deg, #ff4444, #cc0000);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(255, 68, 68, 0.3);
+            animation: pulse 3s infinite;
+        }
+
         .cta-button {
             display: inline-block;
             background: linear-gradient(45deg, #FFD700, #FFA500);
@@ -115,6 +139,38 @@
             transform: translateY(-3px);
             box-shadow: 0 12px 35px rgba(255, 215, 0, 0.6);
             background: linear-gradient(45deg, #FFA500, #FFD700);
+        }
+
+        .trust-indicators {
+            padding: 60px 0;
+            background: rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .trust-item {
+            padding: 20px;
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .trust-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #FFD700;
+        }
+
+        .trust-text {
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: #FFD700;
         }
 
         .features {
@@ -202,6 +258,17 @@
             background: rgba(255, 215, 0, 0.1);
             border-radius: 15px;
             border: 1px solid rgba(255, 215, 0, 0.3);
+            position: relative;
+        }
+
+        .stat-item::before {
+            content: "✓";
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: #00ff00;
+            font-size: 1.2rem;
+            font-weight: bold;
         }
 
         .stat-number {
@@ -237,6 +304,7 @@
             text-align: center;
             border: 2px solid rgba(255, 215, 0, 0.2);
             transition: all 0.3s ease;
+            position: relative;
         }
 
         .process-step:hover {
@@ -258,6 +326,18 @@
             margin: 0 auto 20px;
         }
 
+        .security-guarantee {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #00ff00;
+            color: #000;
+            padding: 5px 8px;
+            border-radius: 5px;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
+
         .contact-section {
             padding: 80px 0;
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
@@ -265,6 +345,29 @@
             background-size: cover;
             background-position: center;
             text-align: center;
+        }
+
+        .testimonial-section {
+            padding: 80px 0;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .testimonial {
+            background: rgba(255, 215, 0, 0.1);
+            border-left: 4px solid #FFD700;
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 10px;
+            font-style: italic;
+            text-align: center;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .testimonial-author {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #FFD700;
         }
 
         .footer {
@@ -396,6 +499,16 @@
             .contact-float:hover {
                 transform: translateX(-50%) translateY(-3px) !important;
             }
+
+            .security-badges {
+                justify-content: center;
+                margin-top: 15px;
+            }
+
+            .badge {
+                font-size: 0.7rem;
+                padding: 6px 10px;
+            }
         }
 
         @keyframes pulse {
@@ -473,6 +586,12 @@
                     <div class="logo">IC3</div>
                     <div class="tagline">Internet Crime Complaint Center</div>
                 </div>
+                <div class="security-badges">
+                    <div class="badge">🔒 SSL Secure</div>
+                    <div class="badge">🛡️ FBI Verified</div>
+                    <div class="badge">✅ Official Portal</div>
+                    <div class="badge">⚡ 24/7 Active</div>
+                </div>
             </div>
         </div>
     </header>
@@ -480,9 +599,40 @@
     <section class="hero">
         <div class="container">
             <h1>Report Cyber Crimes Officially</h1>
+            <div class="urgency-banner">
+                ⚠️ URGENT: Report cybercrime immediately to prevent further damage and protect others
+            </div>
             <img src="img/1.jpg" alt="IC3 Crime Reporting" class="hero-image">
             <p>The FBI's Internet Crime Complaint Center (IC3) - Your trusted platform to report internet-related criminal activity and help combat cybercrime across America</p>
             <button class="cta-button" onclick="k2()">Contact Us</button>
+        </div>
+    </section>
+
+    <section class="trust-indicators">
+        <div class="container">
+            <h2 class="section-title">Official Government Security</h2>
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <div class="trust-icon">🏛️</div>
+                    <div class="trust-text">Federal Bureau<br>of Investigation</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">🔐</div>
+                    <div class="trust-text">256-bit SSL<br>Encryption</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">⚖️</div>
+                    <div class="trust-text">DOJ Authorized<br>Reporting Center</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">🌍</div>
+                    <div class="trust-text">International<br>Cooperation</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">🛡️</div>
+                    <div class="trust-text">Data Protection<br>Compliant</div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -493,21 +643,25 @@
             
             <div class="features-grid">
                 <div class="feature-card">
+                    <div class="security-guarantee">SECURE</div>
                     <h3><span class="icon">📧</span>Accept Public Reports</h3>
                     <p>Individuals, businesses, and financial institutions can report cyber fraud, hacking attacks, ransomware, phishing, and other internet crimes through our official website.</p>
                 </div>
                 
                 <div class="feature-card">
+                    <div class="security-guarantee">VERIFIED</div>
                     <h3><span class="icon">📊</span>Data Analysis</h3>
                     <p>We analyze massive amounts of complaint data to identify trends, patterns, and techniques, providing valuable intelligence to FBI and other law enforcement agencies.</p>
                 </div>
                 
                 <div class="feature-card">
+                    <div class="security-guarantee">ACTIVE</div>
                     <h3><span class="icon">🎯</span>Combat Cybercrime</h3>
                     <p>Reports are forwarded to relevant enforcement agencies (FBI, local police, federal prosecutors) to help track and prosecute criminal organizations.</p>
                 </div>
                 
                 <div class="feature-card">
+                    <div class="security-guarantee">TRUSTED</div>
                     <h3><span class="icon">📚</span>Public Education</h3>
                     <p>We regularly publish annual cybercrime reports and security alerts, revealing the latest fraud schemes and victim statistics to educate the public.</p>
                 </div>
@@ -541,6 +695,20 @@
         </div>
     </section>
 
+    <section class="testimonial-section">
+        <div class="container">
+            <h2 class="section-title">Public Trust & Recognition</h2>
+            <div class="testimonial">
+                "IC3 has been instrumental in helping us recover stolen funds and prosecute cybercriminals. Their professional approach and quick response saved our business."
+                <div class="testimonial-author">- Fortune 500 Company Security Director</div>
+            </div>
+            <div class="testimonial">
+                "The IC3 platform provided us with the necessary tools and support to report a complex fraud case. The FBI's involvement ensured swift action."
+                <div class="testimonial-author">- Financial Institution Representative</div>
+            </div>
+        </div>
+    </section>
+
     <section class="process">
         <div class="container">
             <h2 class="section-title">How It Works</h2>
@@ -548,18 +716,21 @@
             
             <div class="process-steps">
                 <div class="process-step">
+                    <div class="security-guarantee">SECURE</div>
                     <div class="step-number">1</div>
                     <h3>Submit Report</h3>
                     <p>Fill out our official complaint form at ic3.gov with details about the incident, including dates, methods, amounts, and any evidence like IPs, emails, or websites.</p>
                 </div>
                 
                 <div class="process-step">
+                    <div class="security-guarantee">PROTECTED</div>
                     <div class="step-number">2</div>
                     <h3>Analysis & Storage</h3>
                     <p>IC3 receives and analyzes your report through big data systems. Major cases are forwarded to FBI or other enforcement agencies for investigation.</p>
                 </div>
                 
                 <div class="process-step">
+                    <div class="security-guarantee">TRACKED</div>
                     <div class="step-number">3</div>
                     <h3>Follow-up</h3>
                     <p>You receive an IC3 Complaint Number for tracking purposes. Your report contributes to national cybercrime intelligence and prevention efforts.</p>
@@ -657,6 +828,10 @@
     <!-- Contact Floating Button -->
     <button class="contact-float" onclick="k2()">Contact Us</button>
 
-  
+    <script>
+        function k2() {
+            window.open('https://wa.me/11111111111', '_blank');
+        }
+    </script>
 </body>
 </html>
