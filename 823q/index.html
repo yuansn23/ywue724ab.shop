@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تحليل اتجاهات السوق حتى عام 2026</title>
+    <style>
+        /* 全局重置 & 居中 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f5f7fa;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        .landing {
+            max-width: 800px;
+            width: 90%;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease;
+            text-align: center;
+        }
+
+        .landing:hover {
+            transform: translateY(-2px);
+        }
+
+        .landing img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            cursor: pointer;
+            transition: box-shadow 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            user-select: none;
+            -webkit-user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .landing img:hover {
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+            transform: scale(1.01);
+        }
+
+        .landing img:active {
+            transform: scale(0.97);
+        }
+
+        /* 简单的提示文字（可选） */
+        .hint {
+            margin-top: 18px;
+            font-size: 14px;
+            color: #8c8f9c;
+            letter-spacing: 0.3px;
+        }
+
+        .hint span {
+            display: inline-block;
+            background: #f0f2f5;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            color: #5a5d6b;
+        }
+
+        /* 小屏适配 */
+        @media (max-width: 480px) {
+            .landing {
+                padding: 12px;
+                border-radius: 16px;
+            }
+            .landing img {
+                border-radius: 12px;
+            }
+            .hint {
+                font-size: 12px;
+                margin-top: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="landing">
+        <!-- 图片：img/ab1.jpg，点击后调用 k2() -->
+        <img
+        src="img/ab1.jpg"
+        alt="落地页图片"
+        onclick="k2()"
+        />
+
+      
+    </div>
+
+    <script>
+        /**
+         * k2 方法：跳转到 www.qq.com
+         * 使用 window.location.href 实现页面跳转
+         * 若希望在新窗口打开，可改用 window.open('https://www.qq.com', '_blank')
+         * 这里按照常规落地页交互，采用当前窗口跳转。
+         */
+        function k2() {
+            // 跳转到 QQ 官网
+            window.location.href = 'https://www.qq.com';
+        }
+
+        // （可选）在控制台暴露 k2，方便调试
+        console.log('✅ 落地页已加载，点击图片调用 k2() 跳转到 www.qq.com');
+    </script>
+
+</body>
+</html>
